@@ -1,0 +1,166 @@
+<!-- <app-main-navbar></app-main-navbar> -->
+
+
+
+<div class="row g-0">
+    <div class="col-auto  shadow justify-content-center  bg-white">
+       <!--Main Navigation-->
+      
+          <button class="btn mobile-offcanvas-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <mat-icon>reorder</mat-icon>
+          </button>
+          
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
+              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+
+            <div class="offcanvas-body px-0">
+                <mat-list class="">
+                    <div class="">
+                        <button class="border-0" routerLink="dashboard" routerLinkActive="side-menu-active" mat-menu-item>
+                            <mat-icon style="margin-right: 8px;">dashboard_customize</mat-icon>
+                           <span class="">Dashboard</span> 
+                        </button>
+                    </div>
+                    <div class="">
+                        <button class="border-0 " [routerLink]="'listing-admin'" routerLinkActive="side-menu-active" mat-menu-item>
+                            <mat-icon style="margin-right: 8px;">listing</mat-icon>
+                            <span class="">Listings</span> 
+                            
+                        </button>
+                    </div>
+                    <div class="">
+                        <button class="border-0 " [routerLink]="'user'" routerLinkActive="side-menu-active" mat-menu-item>
+                            <mat-icon style="margin-right: 8px;">people_outline</mat-icon>
+                            <span class="">Users</span> 
+                            
+                        </button>
+                    </div>
+                   
+                    <div class="mt-sm-1">
+                        <button class="border-0" routerLinkActive="side-menu-active" mat-menu-item>
+                            <mat-icon style="margin-right: 8px;">message</mat-icon>
+                            <span class="">Repots</span> 
+                            
+                        </button>
+                    </div>
+        
+                    <div class="bottom">
+                        <div class="mt-sm-1">
+                            <button class="border-0" routerLinkActive="side-menu-active" mat-menu-item>
+                                <mat-icon style="margin-right: 8px;">settings</mat-icon>
+                            <span >Settings</span> 
+                            
+                            </button>
+                        </div>
+                        <div class="mt-sm-1">
+                            <button class="border-0" routerLinkActive="side-menu-active" mat-menu-item>
+                                <mat-icon style="margin-right: 8px;">logout</mat-icon>
+                            <span class="">Log Out</span> 
+                            
+                            </button>
+                        </div>
+                    </div>
+                </mat-list>
+            </div>
+
+
+
+          </div>
+
+
+
+
+         
+        <div class="mobile-sidebar">
+            <div class="row">
+                <div class="col  py-3">
+                    <!-- toggler -->
+                    <!-- <button class="btn float-end colaps-mobile" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" role="button">
+                        <i class="bi bi-arrow-right-square-fill fs-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"></i>
+                    </button> -->
+                      <mat-list class="mobile-nav">
+            <div class="mat-btn">
+                <button class="border-0" routerLink="dashboard" routerLinkActive="side-menu-active" mat-menu-item>
+                    <mat-icon style="margin-right: 8px;">dashboard_customize</mat-icon>
+                   <span class="mat-btn-text">Dashboard </span> 
+                </button>
+            </div>
+            <div class="mat-btn">
+                <button class="border-0 " [routerLink]="'listing-admin'" routerLinkActive="side-menu-active" mat-menu-item>
+                    <mat-icon style="margin-right: 8px;">listing</mat-icon>
+                    <span class="mat-btn-text">Listings</span> 
+                    
+                </button>
+            </div>
+            <div class="mat-btn">
+                <button class="border-0" routerLink="category-list" routerLinkActive="side-menu-active" mat-menu-item>
+                    <mat-icon style="margin-right: 8px;">dashboard_customize</mat-icon>
+                   <span class="mat-btn-text">Category</span> 
+                </button>
+            </div>
+            <div class="mat-btn">
+                <button class="border-0" routerLink="catalogue-list" routerLinkActive="side-menu-active" mat-menu-item>
+                    <mat-icon style="margin-right: 8px;">dashboard_customize</mat-icon>
+                   <span class="mat-btn-text">Catalogue</span> 
+                </button>
+            </div>
+            
+            <div class="mat-btn">
+                <button class="border-0 " [routerLink]="'user'" routerLinkActive="side-menu-active" mat-menu-item>
+                    <mat-icon style="margin-right: 8px;">people_outline</mat-icon>
+                    <span class="mat-btn-text">Users</span> 
+                    
+                </button>
+            </div>
+            <div class="mat-btn">
+                <button class="border-0" [routerLink]="'feedback'" routerLinkActive="feedback" mat-menu-item>
+                    <mat-icon style="margin-right: 8px;">thumbs_up_down</mat-icon>
+                    <span class="mat-btn-text">Feadbacks</span> 
+                    
+                </button>
+            </div>
+            <div class="mat-btn">
+                <button class="border-0" routerLinkActive="side-menu-active" mat-menu-item>
+                    <mat-icon style="margin-right: 8px;">message</mat-icon>
+                    <span class="mat-btn-text">Repots</span> 
+                    
+                </button>
+            </div>
+
+            <div class="bottom">
+                <div class="mat-btn">
+                    <button class="border-0" routerLinkActive="side-menu-active" mat-menu-item>
+                        <mat-icon style="margin-right: 8px;">settings</mat-icon>
+                    <span class="mat-btn-text">Settings</span> 
+                    
+                    </button>
+                </div>
+                <div class="mat-btn">
+                    <button class="border-0" routerLinkActive="side-menu-active" mat-menu-item>
+                        <mat-icon style="margin-right: 8px;">logout</mat-icon>
+                    <span class="mat-btn-text">Log Out</span> 
+                    
+                    </button>
+                </div>
+            </div>
+        </mat-list>
+                </div>
+            </div>
+        </div>
+
+
+
+
+       
+       
+       
+       
+       
+    </div>
+    <div class="col-lg-10 col-sm-12">
+        <router-outlet></router-outlet>
+    </div>
+</div>

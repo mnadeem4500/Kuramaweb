@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+
+@use '@angular/material' as mat;
+
+@import "@progress/kendo-theme-default/dist/all.scss";
+
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+// $primary: #198754;
+// $primary: #10673e;
+$primary: #1094FD;
+// $danger: #d50000;
+// $success: rgb(15, 106, 15);
+// $warning: orange;
+// $info: #082769;
+// $body-bg: #ffffff;
+
+@import "bootstrap";
+
+
+
+
+.primary {
+    color: $primary;
+    // color: white;
+}
+
+
+html,
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    // min-height: 100vh;
+
+    // background: rgb(204, 232, 255) !important;
+    // background: linear-gradient(125deg, rgba(204, 232, 255, 1) 0%, rgba(204, 232, 255, 1) 0%, rgba(242, 248, 249, 1) 15%) !important;
+}

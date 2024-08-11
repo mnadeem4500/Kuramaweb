@@ -1,0 +1,28 @@
+<h2 mat-dialog-title>{{data.mode}} Screen List </h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="screenForm">
+
+        <div class="form-group">
+            <label> Name</label>
+            <input type="text" class="form-control" formControlName="name">
+        </div>
+
+
+    </form>
+
+
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close cdkFocusInitial>Cancel</button>
+    <button mat-button (click)="saveScreenControl()" *ngIf="data.mode=='New'" >Save</button>
+    <button mat-button (click)="updateScreenControl()" *ngIf="data.mode=='Edit'">Update</button>
+    <!-- <button mat-button>Delete</button> -->
+
+
+</mat-dialog-actions>
+<div style="display: flex; justify-content: center; margin-top: 4em;">
+    <input type="file" (change)="onInputChang($event)">
+</div>
+<p>base64:</p>
+<p style="word-wrap: break-word;">{{base64}}</p>

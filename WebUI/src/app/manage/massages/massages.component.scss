@@ -1,0 +1,49 @@
+.welcome-heading{
+    color: var(--Neutral-Grey-02, #1A1A1A);
+
+/* UI/T2/700 */
+font-family: Inter;
+font-size: 56px;
+font-style: normal;
+font-weight: 700;
+line-height: 62px; /* 110.714% */
+}
+label{
+    color: var(--Neutral-Grey-07, #999);
+
+/* UI/B2/400 */
+font-family: Inter;
+font-size: 36px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+}
+.butn{
+    color: var(--Neutral-Grey-07, #999);
+
+/* UI/B2/400 */
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+background-color: white;
+border: none;
+margin-right: 2rem;
+}
+
+// image Size
+.image-size{
+    width: 56px;
+    height: 56px;
+}
+.seller-name{
+    color: var(--Neutral-Grey-02, #1A1A1A);
+
+/* UI/B3/700 */
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 22px; /* 157.143% */
+}

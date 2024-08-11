@@ -1,0 +1,105 @@
+<div class="container-fluid p-4">
+    <div class="row">
+        
+        <div class="col">
+            <h2 class="fw-bold" style="font-size: 22px;">Categories</h2>
+        </div>
+        <div class="col text-end">
+            <button mat-button color="primary" (click)=" openCategoryListing()">Place your Ad</button>
+        </div>
+        <div class="col text-end">
+            <button mat-button color="primary" (click)=" openDialog()">Create Category</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="bg-white mt-1  rounded p-3 table-responsive">
+            <!-- table -->
+            <kendo-grid [kendoGridBinding]="allCategories" [pageSize]="10" [pageable]="true" >
+                <kendo-grid-column title="ID" field="id" />
+                <kendo-grid-column title="Name" field="name" />
+                <kendo-grid-column title="Parent" field="parentId">
+                    <ng-template kendoGridCellTemplate let-dataItem>
+                        {{ getParentName(dataItem.parentId)}}
+                    </ng-template>
+                </kendo-grid-column>
+                <kendo-grid-column title="Icon" field="icon">
+                    <ng-template kendoGridCellTemplate let-dataItem>
+                        <img [src]="dataItem.icon" style="width: 50px; height: 50px;"/>
+                    </ng-template>
+                </kendo-grid-column>
+                <kendo-grid-column title="Max Allow" field="maxAllowedImages"></kendo-grid-column>
+                <kendo-grid-column title="Post Validity" field="postValidity"></kendo-grid-column>
+                <kendo-grid-column title="Status">
+                    <ng-template kendoGridCellTemplate let-dataItem>
+                        Active
+                    </ng-template>
+                </kendo-grid-column>
+
+
+                <kendo-grid-column title="Actions">
+                    <ng-template kendoGridCellTemplate let-dataItem>
+                        <div class="d-flex" >
+                            <mat-icon class="mat-icon-edit"
+                            (click)=" openEditDialog(dataItem)">edit
+                        </mat-icon>
+                        <mat-icon class="mat-icon-delete" (click)="openDeleteDialog(dataItem)">delete_outline</mat-icon>
+                        <mat-icon class="mat-icon-edit"
+                            (click)="openViewDialog(dataItem)">list
+                        </mat-icon>
+                    </div>
+                    </ng-template>
+                </kendo-grid-column>
+
+
+                <!-- <thead>
+                    <tr class="bg-light pt-2 pb-2">
+                        <th scope="col">Name</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Parent Id</th>
+                        <th scope="col">Icon</th>
+                        <th scope="col">Max Allow Image</th>
+                        <th scope="col">Post validity</th>
+                        <th scope="col">Status</th>
+                        <th scope="col"></th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let categorydata of allCategories">
+                        <td>
+                            <ul>
+                                <li><img src="assets/images/name-1.png" class="name-img">Toyota Innova</li>
+                            </ul>
+                        </td>
+
+                        <td> {{categorydata.id}}</td>
+                        <td>{{categorydata.name}}</td>
+                        <td>{{categorydata.parentId}}</td>
+                        <td>{{categorydata.icon}}</td>
+                        <td>{{categorydata.maxAllowedImages}}</td>
+                        <td>{{categorydata.postValidity}}</td>
+                        <td>Active</td>
+
+                        <td>
+                            <div class="d-flex" >
+                                    <mat-icon class="mat-icon-edit"
+                                    (click)=" openEditDialog(categorydata)">edit
+                                </mat-icon>
+                                <mat-icon class="mat-icon-delete" (click)="openDeleteDialog(categorydata)">delete_outline</mat-icon>
+                                <mat-icon class="mat-icon-edit"
+                                    (click)="openViewDialog(categorydata)">list
+                                </mat-icon>
+                            </div>
+                        </td>
+                
+                    </tr>
+                </tbody> -->
+
+            </kendo-grid>
+        </div>
+    </div>
+    <div>
+     
+    </div>
+</div>

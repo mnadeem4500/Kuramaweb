@@ -1,0 +1,231 @@
+.main-heading{
+    color: var(--000000, #000);
+     padding-top: 27px;
+    font-family: Inter;
+font-size: 26px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: -0.086px;
+}
+.rounded-circle{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    
+}
+.super-admin{
+    margin-top: -30px;
+    margin-left: 18px;
+}
+
+ul
+li{
+    list-style: none;
+    color: var(--959595, #959595);
+font-family: Inter;
+font-size: 14px;
+text-align: left;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: -0.086px;
+
+}
+.span-text{
+    color: var(--Style, #3CCF4E);
+}
+.span-text-2{
+    color: var(--fd-5454, #FD5454);
+}
+.total-user{
+    color: var(--959595, #959595);
+font-family: Inter;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: -0.086px;
+}
+.price{
+    color: var(--1094-fd, #1094FD);
+text-align: left;
+font-family: Inter;
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: -0.086px;
+}
+
+.drop{
+    border: 1px solid rgb(239, 238, 238);
+    padding: 7px;
+    border-radius: 3px;
+}
+.select{
+    margin-left: 30rem;
+}
+.bg{
+    background-color: #000;
+    width: 12px;
+    height: 7px;
+}
+.table{
+    padding: 23px;
+}
+thead{
+    padding-left: 20px;
+}
+table {
+    padding: 10px; /* Padding around the entire table */
+  }
+  th{
+    padding-top: 10px;
+   
+  }
+  
+  td {
+    padding: 18px 10px 8px 10px; /* Padding within cells */
+
+  }
+  .live{
+    background-color: #00B664;
+    border-radius: 40px;
+    // padding: 9px 15px;
+    border: 1px solid #00B664;
+    color: var(--ffffff, #FFF);
+font-family: Inter;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+    width: 91.509px;
+height: 26.567px;
+flex-shrink: 0;
+margin-top: 9px;
+  }
+  .name-img{
+    // width: 12px;
+    // height: 12px;
+    margin-left: -33px;
+    margin-right: 7px;
+  }
+ 
+  ul li{
+    color: var(--000000, #000);
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+  }
+  .location{
+    color: var(--000000, #262626);
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+margin-top: 9px;
+  }
+  .bloked{
+    color: #FD5454;
+  }
+  .pending{
+    background-color: #FCBE2D;
+    border-radius: 40px;
+    // padding: 9px 15px;
+    border: 1px solid #FCBE2D;
+    color: var(--ffffff, #FFF);
+font-family: Inter;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+    width: 91.509px;
+height: 26.567px;
+flex-shrink: 0;
+margin-top: 9px;
+  }
+  .rejected{
+    background-color: #FD5454;
+    border-radius: 40px;
+    // padding: 9px 15px;
+    border: 1px solid #FD5454;
+    color: var(--ffffff, #FFF);
+font-family: Inter;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+    width: 91.509px;
+height: 26.567px;
+flex-shrink: 0;
+margin-top: 9px;
+  }
+  .see-all{
+    margin-left: 9rem;
+    cursor: pointer;
+  }
+
+  .mat-icon-delete{
+    background-color: #e6e6e6;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    color: #FD5454;
+    font-size: 20px;
+   margin: 6px;
+   cursor: pointer;
+  }
+  .mat-icon-edit{
+    background-color: #e6e6e6;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    color: rgb(97, 97, 97);
+    font-size: 20px;
+   margin: 6px;
+   cursor: pointer;
+  }
+  .mat{
+    background-color: #e6e6e6;
+    width: 5rem;
+    border-radius: 5px;
+    
+
+  }
+  .see-all{
+    // margin-left: 19rem;
+    cursor: pointer;
+    padding-bottom: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--000000, #767474);
+  }
+
+
+
+  @media (max-width: 768px) { /* Target screens up to 768px wide (e.g., tablets in portrait) */
+    .see-all{
+      text-align: center;
+      width: max-content;
+      cursor: pointer;
+    }
+ 
+  }
+    
+    @media (max-width: 480px) { /* Target screens up to 480px wide (e.g., smartphones in portrait) */
+     
+      .small-width{
+        width: 49%;
+      }
+
+      .see-all{
+        margin-left: -2rem;
+        width: max-content;
+        cursor: pointer;
+      }
+      ul{
+        width: 9rem;
+       }
+  }

@@ -1,0 +1,43 @@
+<div class="container-fluid container-mobile p-5 bg-white ">
+  <div class="row">
+    <div class="col text-center">
+      <div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-sm-12 offset-lg-2">
+              <h2 class=" main-title">What you want to list?</h2>
+
+
+              <p class="p-5 pt-0 description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus dolore
+                doloremque error
+                expedita nemo ipsam sunt, possimus aperiam blanditiis nam.</p>
+
+            </div>
+            <div>
+
+            </div>
+          </div>
+        </div>
+        <div class="container row">
+          <!-- card -->
+          <div class="col-lg-3 col-sm-6 mt-2 position-relative " (click)="categoryselect(categorydata)"  *ngFor="let categorydata of CopyallCategories">
+              <div class="overlay-card" [ngClass]="{'shadow-lg border border-4 border-danger':currentSelectedCat==categorydata.id}">
+                 <img [src]="categorydata.icon" class="card-img-top rounded" alt="Image 1"> 
+                <div class="card-body overlay">
+                  <h3 class="card-title">{{categorydata.name}}</h3>
+                </div>
+              </div>
+            </div>
+
+        </div>
+
+        <div class="step-btns">
+          <button class="btn button mt-2 w-25 w-sm-50 mobile-btn fw-bold" (click)="btnNext()" [disabled]="currentSelectedCat==-1">Next Step</button>
+        </div>
+      </div>
+   
+    </div>
+    <!-- <img src="assets/images/Ellipse 1.png" alt="" class="Ellips-1">
+  <img src="assets/images/Ellipse 2.png" alt="" class="Ellips-2"> -->
+  </div>
+  </div>

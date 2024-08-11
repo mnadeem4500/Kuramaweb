@@ -1,0 +1,78 @@
+<h2 mat-dialog-title>{{data.mode}} Category </h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="categoryForm">
+
+        <div class="form-group">
+            <label> Name</label>
+            <input type="text" class="form-control" (change)="textboxChange($event)" formControlName="name">
+            @if(categoryForm.controls['name'].touched &&categoryForm.controls['name'].hasError('required')){
+            <span class="text-danger">Name is required</span>
+            }
+        </div>
+
+
+        <div class="form-group">
+            <label> Parent ID </label>
+            <select class="form-control" formControlName="parentId">
+                <option value="0">Root</option>
+                @for (parent of parentList; track $index) {
+                <option [value]="parent.id">
+                    {{parent.name}}
+                </option>
+                }
+            </select>
+        @if(categoryForm.controls['parentId'].touched&& categoryForm.controls['parentId'].hasError('required')){
+                <span class="text-danger">Parent id Is required</span>
+            }
+        </div>
+
+
+
+        <div class="form-group">
+            <label asp-for="icon"> Icon </label>
+            <input type="file" (change)="fileChange($event)">
+           
+        </div>
+            <!-- <input asp-for="icon" class="form-control" formControlName="icon">
+            <span asp-validation-for="icon"></span> -->
+
+            <!-- @if(categoryForm.controls['icon'].touched&& categoryForm.controls['icon'].hasError('required')){
+            <span class="text-danger"> Icon Is required </span>
+            } -->
+       
+
+
+
+        <div class="form-group">
+            <label> Max Allow Images </label>
+            <input type="number" class="form-control" formControlName="maxAllowedImages">
+            @if(categoryForm.controls['maxAllowedImages'].touched&& categoryForm.controls['maxAllowedImages'].hasError('required')){
+                <span class="text-danger"> Max Images required</span>
+            }
+            
+        </div>
+
+
+
+        <div class="form-group">
+            <label> Post Validity </label>
+             <input type="number" class="form-control" formControlName="postValidity">
+            @if(categoryForm.controls['postValidity'].touched && categoryForm.controls['postValidity'].hasError('required')){
+                <span class="text-danger"> Post Validity required</span>
+            }
+        </div>
+
+    </form>
+{{this.categoryForm.value |json}}
+<p>base64:</p>
+<p style="word-wrap: break-word;">{{base64}}</p>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close cdkFocusInitial>Cancel</button>
+    <button mat-button (click)="save()" [disabled]="categoryForm.invalid" *ngIf="data.mode=='New'">Save</button>
+    <button mat-button (click)="update()" [disabled]="categoryForm.invalid" *ngIf="data.mode=='Edit'">Update</button>
+    <button mat-button (click)="delete(categoryForm.value.id)" *ngIf="data.mode=='Delete'">Delete</button>
+
+
+</mat-dialog-actions>

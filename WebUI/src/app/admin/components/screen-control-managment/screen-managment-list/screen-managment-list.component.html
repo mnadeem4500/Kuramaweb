@@ -1,0 +1,78 @@
+<div class="container-fluid p-4">
+    <div class="row">
+        <div class="col">
+            <h2 class="fw-bold" style="font-size: 22px;">Screen List</h2>
+        </div>
+        <div class="col text-end"> 
+        <button mat-button color="primary" (click)=" openScreenDialoge()">Create Screen Control</button>
+        </div>
+    </div>
+    <div class="row">
+        <div class="bg-white mt-1  rounded p-3 table-responsive">
+            <!-- table -->
+            <kendo-grid [kendoGridBinding]="screenControllist" [pageSize]="10" [pageable]="true" >
+                <kendo-grid-column title="ID"field="id" />
+                <kendo-grid-column title="Screen Control" field="name"/>
+                <kendo-grid-column title="Actions">
+                    <ng-template kendoGridCellTemplate let-dataItem>
+                        <div class="d-flex" >
+                            <mat-icon class="mat-icon-edit" (click)="openScreenEdit()">edit</mat-icon>
+                        <mat-icon class="mat-icon-delete">delete_outline</mat-icon>
+                        <mat-icon class="mat-icon-edit">list"</mat-icon>
+                    </div>
+                    </ng-template>
+                </kendo-grid-column>
+                
+
+            
+            </kendo-grid>
+                <!-- <thead>
+                    <tr class="bg-light pt-2 pb-2">
+                        <th scope="col">Name</th>
+                        <th scope="col">ID</th>
+                        <th scope="col">Catalogue</th>
+                        <th scope="col">Description </th>
+                        <th scope="col">Active</th>
+                        <th scope="col">Status</th>
+                        <th scope="col"></th>
+                        
+
+                    </tr>
+                </thead>
+                <tbody>
+                     @for (catalogue of cataloguelist; track $index) { 
+                    <tr>
+                        <td>
+                            <ul>
+                                <li><img src="assets/images/name-1.png" class="name-img">Toyota Innova</li>
+                            </ul>
+                        </td>
+                        <td>{{catalogue.masterId}}</td>
+                        <td>{{catalogue.catalogueName}}</td>
+                        <td>{{catalogue.description}}</td>
+                        <td>{{catalogue.active}}</td>
+                        <td>Active</td>
+                        <td>
+                            <div class="mat">
+                               <mat-icon class="mat-icon-edit" (click)=" openEditDialog(cataloguelist)">edit</mat-icon>
+                                <mat-icon class="mat-icon-delete">delete_outline</mat-icon>
+                            </div>
+                        </td>
+                
+                    </tr>
+                } 
+                </tbody>
+                 -->
+            
+        </div>
+
+        <div class="row bg-white g-0 ">
+
+            <div class="col text-center see-all">
+
+                <p class="">See All</p>
+
+            </div>
+        </div>
+    </div>
+</div>

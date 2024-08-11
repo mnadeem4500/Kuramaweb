@@ -1,0 +1,151 @@
+
+<div class="container-fluid p-4">
+    <div class="row">
+        <div class="col">
+        <h2 class="fw-bold" style="font-size: 22px;">Listings</h2>
+        </div>
+    </div>
+    <div class="row bg-white rounded-3 ms-1">
+        <div class="col-auto bg-primary rounded rounded-left-3">
+            <mat-icon style="color: white; font-size: 28px; cursor: pointer;"
+             class="mt-2">filter_list</mat-icon>
+        </div>
+        <div class="col border-right p-1  m-2">
+            <Select class=" border-0 select">
+                <option value="">Category</option>
+                <option value="">Category</option>
+                <option value="">Category</option>
+            </Select>
+        </div>
+        <div class="col border-right p-1  m-2">
+            <Select class=" border-0 select">
+                <option value="">Name</option>
+                <option value="">Name</option>
+                <option value="">Name</option>
+            </Select>
+        </div>
+        <div class="col border-right p-1  m-2">
+            <Select class=" border-0 select">
+                <option value="">Sort by</option>
+                <option value="">Sort by</option>
+                <option value="">Sort by</option>
+            </Select>
+        </div>
+        <div class="col border-right p-1  m-2">
+            <Select class=" border-0 select">
+                <option value="">Brand</option>
+                <option value="">Brand</option>
+                <option value="">Brand</option>
+            </Select>
+        </div>
+        <div class="col border-right p-1  m-2">
+            <Select class=" border-0 select">
+                <option value="">Price</option>
+                <option value="">Price</option>
+                <option value="">Price</option>
+            </Select>
+        </div>
+        <div class="col border-right p-1  m-2">
+            <Select class=" border-0 select">
+                <option value="">Features</option>
+                <option value="">Features</option>
+                <option value="">Features</option>
+            </Select>
+        </div>
+        <div class="col border-right p-1  m-2">
+            <Select class=" border-0 select">
+                <option value="">Location</option>
+                <option value="">Location</option>
+                <option value="">Location</option>
+            </Select>
+        </div>
+        <div class="col border-right p-1  m-2">
+            <Select class=" border-0 select">
+                <option value="">Advance Search </option>
+                <option value="">Advance Search</option>
+                <option value="">Advance Search</option>
+            </Select>
+        </div>
+        <div class="col pt-1 text-danger mt-2" style="cursor: pointer;">
+            <p>Reset Filters</p>
+        </div>
+        
+        
+    </div>
+    <div class="row mt-4 mb-3 d-flex justify-content-between"> 
+        <div class="col ">
+            <p class="select">Showing 1-10 of 783,450</p>
+        </div>
+        <div class="col-auto d-flex justify-content-center align-center pt-1 bg-white rounded"> 
+            <mat-icon  class="text-secondary" style="cursor: pointer;" [routerLink]="'dashboard'">keyboard_arrow_left</mat-icon>
+            <mat-icon class="text-primary" style="cursor: pointer;" [routerLink]="'user'">keyboard_arrow_right</mat-icon>
+        </div>
+    </div>
+    <div class="row">
+        <div class="bg-white mt-1  rounded p-3 table-responsive">
+            <!-- table -->
+            <table class="table table-hover align-middle">
+                <thead>
+                    <tr class="bg-light pt-2 pb-2">
+                        <th scope="col">name</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Date&Time</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let list of listing">
+                        <td>
+                            <ul>
+                                <li><img src="assets/images/name-1.png" class="name-img">Toyota Innova</li>
+                            </ul>
+                        </td >  
+                            <td>775 Rolling Green Rd</td>
+                            <td> {{list.creationDate| date : " YYYY-MM-dd hh:mm:ss"  }}</td>
+                                <td>{{list.price}}</td>
+                                <td>{{list.title}}</td>
+                                <td>Active</td>
+                    
+                        <td>
+                            <div class="mat">
+                                <mat-icon  class="mat-icon-edit">edit</mat-icon>
+                                <mat-icon class="mat-icon-delete">delete_outline</mat-icon>
+                            </div>
+                        </td>
+                    </tr>                    
+                </tbody>
+            </table>
+           
+            
+        </div>
+        <div> 
+            <h1>This  Component Show the list of listing   </h1>
+            <div>
+                <th>ID</th>
+                <th>Price</th>
+                <th>Title</th>
+                <th>Action</th>
+
+                <tr *ngFor="let list of listing">
+                    <td>{{list.listingId}}</td>
+                    <td>{{list.price}}</td>
+                    <td>{{list.title}}</td>
+                    <td>Abn askdjfhl fkjsahdf</td>
+                </tr>
+            </div>
+        </div>
+        <div class="row bg-white g-0 ">
+                
+            <div class="col text-center see-all">
+            
+                <p class="">See All</p>
+           
+        </div>
+    </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<div class="container-fluid container-mobile p-5 bg-white ">
+    <div class="row">
+        <div class="col text-center">
+            <div>
+                <div class="container">
+                    <div class="row">
+                        <div  class="">
+                            <div class="container  d-flex flex-column justify-content-center">
+                              <h2 class="main-title">Now choose the right category <br> for your ad:</h2>
+                    
+                              <div class=" d-flex flex-column justify-content-center align-items-center">
+                    
+                                <div class="d-flex justify-content-between mobile-view mt-4 w-50 border-bottom pb-2" *ngFor="let data of filteredCategories"
+                                 (click)="subcategoryselect(data)">
+                                  <span class="category-select">{{data.name}}</span>
+                                  <div>
+                                    <img src="assets/images/arrow.svg" alt="">
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="step-btns mt-5">
+                              <button class="btn button btn-primary mobile-btn w-25 fw-bold" (click)="previous()">Previous Step</button>
+                              <!-- <button class="btn button btn-primary mobile-btn w-25 fw-bold" (click)="next()">Next Step</button> -->
+                            </div>
+                          </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,510 @@
+<div class="container-fluid container-mobile p-5 bg-white ">
+  <div class="row">
+    <div class="col text-center">
+ <!-- Step 4 fields here -->
+      <div class="container-fluid">
+        <h2 class="main-title">You’re almost there!</h2>
+        <div class=" d-flex justify-content-center align-items-center flex-column">
+
+          <form [formGroup]="listingForm">
+             <input type="file" [multiple]="true"  #uploadFileInput class="form-control"  placeholder="Upload Images"
+            multiple class="w-100 border-0 d-none" (change)="fileChange($event)">
+
+           <div class="row mt-3 mb-4 ">
+            <div class="col"(click)="uploadFileInput.click()" style="cursor: pointer;"> 
+              <!-- field Design -->
+              <div class="input bg-primary width-1">
+                <div class="row w-100">
+                  <div class="col-10 d-flex flex-column align-items-start">
+                    <ul class="p-0 m-0">
+                      <li class="d-flex "><mat-icon class="me-2">photo_camera</mat-icon>
+                        Upload Pictures</li>
+                    </ul>
+                    <p class="location text-light m-0">You can upload 20 Images in JPG, PNG or JPEG format.</p>
+                  </div>
+                  <div class="col">
+                    <img src="assets/images/file_upload.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            </div>
+            display images
+          
+            <div class="row width-1">
+                <div class="col-1 d-flex align-items-start">
+                  <img style="width: 90px; height: 90px; border-radius: 18px;" class="p-2" [src]="base64">
+                </div>
+             
+            </div> 
+            <div class="row mt-3 mb-4">
+              <div class="col">
+                <div class="input width-1 form group">
+                  <input type="text" class="form-control" formControlName="sku" placeholder="SKU">
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3 mb-4">
+              <div class="col">
+                <div class="input width-1">
+                  <input type="text" class="form-control" formControlName="title" placeholder="Title">
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3 mb-4">
+              <div class="col">
+                <div class="input width-1">
+                  <input type="text" class="form-control" formControlName="shortDescription"
+                    placeholder="Short Description">
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3 mb-4">
+              <div class="col">
+                <div class="input width-1">
+                  <input type="text" class="form-control" formControlName="longDescription"
+                    placeholder="LongDescription">
+                </div>
+              </div>
+            </div>
+            <!-- <div class="row mt-3 mb-4">
+              <div class="col">
+                <div class="input width-1">
+                  <input type="text" class="form-control" formControlName="thumbImage" placeholder="Thumb Image">
+                </div>
+              </div>
+            </div> -->
+            <div class="row mt-3 mb-4">
+              <div class="col">
+                <div class="input width-1">
+                  <input type="number" class="form-control" formControlName="price" placeholder="Price">
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3 mb-4">
+              <div class="col">
+                <div class="input width-1">
+                  <input type="text" class="form-control" formControlName="isPriceNegotiable"
+                    placeholder="Price Negotiation">
+                </div>
+              </div>
+            </div>
+            <!-- <div>
+              <select class="form-control" formControlName="categoryId">
+                <option value="0">Root Category</option>
+                <option *ngFor="let parent of parentList" [value]="parent.id">
+                  {{ parent.name }}
+                </option>
+              </select>
+            </div> -->
+          </form>
+            <div class="row mt-3 map-section">
+              <div class="col">
+                <div class="input d-flex flex-column width">
+
+                  <div class="d-flex justify-content-between w-100">
+                    <span class="fw-bold">Extras </span>
+                    <span class="fw-bold text-primary">Show All</span>
+                  </div>
+                  <div class="row d-flex g-3" style="column-gap: 3rem;">
+                    <div class="col-auto d-flex align-items-start flex-column p-0">
+                      <p class="checkbox">
+                        <mat-checkbox>Climate Control</mat-checkbox>
+                      </p>
+                      <p class="checkbox">
+                        <mat-checkbox>DVD Player</mat-checkbox>
+                      </p>
+                      <p class="checkbox">
+                        <mat-checkbox>Keyless Entry</mat-checkbox>
+                      </p>
+                      <p class="checkbox">
+                        <mat-checkbox>Navigation System</mat-checkbox>
+                      </p>
+                      <p class="checkbox">
+                        <mat-checkbox>Premium Sound System</mat-checkbox>
+                      </p>
+
+                    </div>
+                    <div class="col d-flex align-items-start flex-column p-0">
+                      <p class="checkbox">
+                        <mat-checkbox>Cooled Seats</mat-checkbox>
+                      </p>
+                      <p class="checkbox">
+                        <mat-checkbox>Front Wheel Drive</mat-checkbox>
+                      </p>
+                      <p class="checkbox">
+                        <mat-checkbox>Leather Seats</mat-checkbox>
+                      </p>
+                      <p class="checkbox">
+                        <mat-checkbox>Parking Sensors</mat-checkbox>
+                      </p>
+                      <p class="checkbox">
+                        <mat-checkbox>Rear View Camera</mat-checkbox>
+                      </p>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+              <div class="col">
+                <div class="input width">
+                
+                  <input type="email" placeholder="Enter Your Email here.." class="border-0 w-100" name="" id="">
+
+                </div>
+                <p><iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.0040243987637!2d74.22999232555709!3d31.41401520238903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190032e0186e85%3A0xefee121be8064b7d!2sDubai%20Town%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1701085065888!5m2!1sen!2s"
+                    style="border:0;" class="mt-3 map rounded" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+              </div>
+            </div> 
+            <div class="row mt-3">
+              <div class="col" style="width: 55%;">
+                <p class="input-style ms-3 me-3">Welcome to Kurama, your local hub for buying and selling used products.
+                  Explore a world of possibilities, right at your fingertips.</p>
+              </div>
+            </div>
+          
+          
+          <!-- <button  (click)="saveListing()" >Save</button>  
+          <div class="step-btns mt-5">
+            <button class="btn button btn-primary mobile-btn pt-3 pb-3  fw-bold" (click)="saveListing()">Submit</button>
+          </div>
+        -->
+        </div>
+      </div>
+      <div class="step-btns mt-3">
+        <button style="width: 31%; margin-right: 1rem;" class="btn button btn-primary mobile-btn pt-3 pb-3  fw-bold"(click)="saveListing()"
+         >Submit</button>
+      </div> 
+    </div>
+    <div >
+    </div>
+  </div>
+</div>
+<!--//////////////////////
+<div class="container-fluid container-mobile p-5 bg-white ">
+  <div class="row">
+    <div class="col text-center">
+        <!-- Step 4 fields here 
+        <div class="container-fluid " style="border:5px solid black" >
+          <h2 class="main-title" style="background-color: aqua;">You’re almost there!</h2>
+          <div class=" d-flex justify-content-center align-items-center flex-column" style="background-color: blue;">
+             row-1 
+             input field
+            <input type="file"  #uploadFileInput placeholder="Upload Images"
+              multiple class="w-100 border-0 d-none">
+
+             <div class="row mt-3 mb-4 ">
+              <div class="col" style="background-color: rgb(157, 255, 0);"(click)="uploadFileInput.click()" style="cursor: pointer;">
+                 field Design 
+                <div class="input bg-primary width-1">
+                  <div class="row w-100">
+                    <div class="col-10 d-flex flex-column align-items-start">
+                      <ul class="p-0 m-0">
+                        <li class="d-flex "><mat-icon class="me-2">photo_camera</mat-icon>
+                          Upload Pictures</li>
+                      </ul>
+                      <p class="location text-light m-0">You can upload 20 Images in JPG, PNG or JPEG format.</p>
+                    </div>
+                    <div class="col">
+                      <img src="assets/images/file_upload.png" alt="">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> 
+            display images
+          <div class="row width-1">
+              <div class="col-1 d-flex align-items-start">
+                <img style="width: 90px; height: 90px; border-radius: 18px;" class="p-2">
+              </div>
+            </div>
+            <row-2 
+            <div class="row mt-3 mb-4">
+              <div class="col">
+                <div class="input width-1 form group" >
+                  <input  type="text" class="form-control" formControlName="sku" placeholder="SKU">
+                </div>
+              </div>
+            </div>
+            row-3 
+            <div class="row mt-3 mb-4">
+              <div class="col">
+                <div class="input width-1">
+                  <input  type="text" class="form-control" formControlName="title" placeholder="Title">
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3 mb-4">
+              <div class="col">
+                <div class="input width-1">
+                  <input  type="text" class="form-control" formControlName="shortDescription" placeholder="Short Description">
+                </div>
+              </div>
+              </div>
+              <div class="row mt-3 mb-4">
+              <div class="col">
+                <div class="input width-1">
+                  <input  type="text" class="form-control" formControlName="longDescription" placeholder="LongDescription">
+                </div>
+              </div>
+            </div>
+
+             <div class="row mt-3 mb-4">
+              <div class="col">
+                <div class="input width-1">
+                  <input  type="text" class="form-control" formControlName="thumbImage" placeholder="Thumb Image">
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3 mb-4">
+              <div class="col">
+                <div class="input width-1">
+                  <input  type="number" class="form-control" formControlName="price" placeholder="Price">
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3 mb-4">
+              <div class="col">
+                <div class="input width-1">
+                  <input  type="text" class="form-control" formControlName="isPriceNegotiable" placeholder="Price Negotiation">
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3 mb-4">
+              <div class="col">
+                <div class="input width-3">
+              <select class="form-control" formControlName="categoryId" >
+                  <option value="0">Root Category</option>
+                  @for (parent of parentList; track $index) {
+                  <option [value]="parent.id">
+                      {{parent.name}}
+                  </option>
+                  }
+              </select>
+          </div>
+          </div>
+          </div>
+          <div class="row mt-3">
+              <div class="col">
+                <div class="input width">
+                  <select class="form-control input-style p-0" id="gender" name="gender">
+                    <option value="male">Mechanical Condition</option>
+                    <option value="male">Yes</option>
+                    <option value="female">NO</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col">
+                <div class="input width">
+                
+                  <select class="form-control input-style p-0" id="gender" name="gender">
+                    <option value="male">Exterior Color</option>
+                    <option value="male">Yes</option>
+                    <option value="female">NO</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-3">
+              <div class="col">
+                <div class="input width">
+                
+                  <select class="form-control input-style p-0" id="gender" name="gender">
+                    <option value="male">Interior Color</option>
+                    <option value="male">Yes</option>
+                    <option value="female">NO</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col">
+                <div class="input width">
+                  
+                  <select class="form-control input-style p-0" id="gender" name="gender">
+                    <option value="male"> Warrenty</option>
+                    <option value="male">Yes</option>
+                    <option value="female">NO</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-3">
+              <div class="col">
+                <div class="input width">
+               
+                  <select class="form-control input-style p-0" id="gender" name="gender">
+                    <option value="male">Doors</option>
+                    <option value="male">Yes</option>
+                    <option value="female">NO</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col">
+                <div class="input width">
+                  
+                  <select class="form-control input-style p-0" id="gender" name="gender">
+                    <option value="male"> No. of Cylinders</option>
+                    <option value="male">2</option>
+                    <option value="female">3</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-3">
+              <div class="col">
+                <div class="input width">
+              
+                  <select class="form-control input-style p-0" id="gender" name="gender">
+                    <option value="male">Transmission Type</option>
+                    <option value="male">True</option>
+                    <option value="female">False</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col">
+                <div class="input width">
+                
+                  <select class="form-control input-style p-0" id="gender" name="gender">
+                    <option value="male"> Body Type</option>
+                    <option value="male">Well</option>
+                    <option value="female">Well</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-3">
+              <div class="col">
+                <div class="input width">
+                
+                  <select class="form-control input-style p-0" id="gender" name="gender">
+                    <option value="male">Seating Capacity</option>
+                    <option value="male">True</option>
+                    <option value="female">False</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col">
+                <div class="input width">
+                
+                  <select class="form-control input-style p-0" id="gender" name="gender">
+                    <option value="male"> Horsepower </option>
+                    <option value="male">Well</option>
+                    <option value="female">Well</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-3">
+              <div class="col">
+                <div class="input width">
+                  
+                  <select class="form-control input-style p-0" id="gender" name="gender">
+                    <option value="male">Engine Capacity (cc)</option>
+                    <option value="male">True</option>
+                    <option value="female">False</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col">
+                <div class="input width">
+             
+                  <select class="form-control input-style p-0" id="gender" name="gender">
+                    <option value="male"> Left Hand </option>
+                    <option value="male">Well</option>
+                    <option value="female">Well</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-3 map-section" style="border: 4px solid black;">
+              <div class="col" style="border: 4px solid red;">
+                <div class="input d-flex flex-column width">
+
+                  <div class="d-flex justify-content-between w-100">
+                    <span class="fw-bold">Extras </span>
+                    <span class="fw-bold text-primary">Show All</span>
+                  </div>
+                  <div class="row d-flex g-3" style="column-gap: 3rem;" style="border: 5px solid greenyellow;">
+                    <div class="col-auto d-flex align-items-start flex-column p-0">
+                      <p class="checkbox">
+                        <mat-checkbox>Climate Control</mat-checkbox>
+                      </p>
+                      <p class="checkbox">
+                        <mat-checkbox>DVD Player</mat-checkbox>
+                      </p>
+                      <p class="checkbox">
+                        <mat-checkbox>Keyless Entry</mat-checkbox>
+                      </p>
+                      <p class="checkbox">
+                        <mat-checkbox>Navigation System</mat-checkbox>
+                      </p>
+                      <p class="checkbox">
+                        <mat-checkbox>Premium Sound System</mat-checkbox>
+                      </p>
+
+                    </div>
+                    <div class="col d-flex align-items-start flex-column p-0">
+                      <p class="checkbox">
+                        <mat-checkbox>Cooled Seats</mat-checkbox>
+                      </p>
+                      <p class="checkbox">
+                        <mat-checkbox>Front Wheel Drive</mat-checkbox>
+                      </p>
+                      <p class="checkbox">
+                        <mat-checkbox>Leather Seats</mat-checkbox>
+                      </p>
+                      <p class="checkbox">
+                        <mat-checkbox>Parking Sensors</mat-checkbox>
+                      </p>
+                      <p class="checkbox">
+                        <mat-checkbox>Rear View Camera</mat-checkbox>
+                      </p>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+              <div class="col" style="border: 4px solid red;">
+                <div class="input width">
+                
+                  <input type="email" placeholder="Enter Your Email here.." class="border-0 w-100" name="" id="">
+
+                </div>
+                <p><iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3405.0040243987637!2d74.22999232555709!3d31.41401520238903!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190032e0186e85%3A0xefee121be8064b7d!2sDubai%20Town%20Lahore%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2s!4v1701085065888!5m2!1sen!2s"
+                    style="border:0;" class="mt-3 map rounded" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+              </div>
+            </div> 
+
+
+            <div class="row mt-3">
+              <div class="col" style="width: 55%;">
+                <p class="input-style ms-3 me-3">Welcome to Kurama, your local hub for buying and selling used products.
+                  Explore a world of possibilities, right at your fingertips.</p>
+              </div>
+            </div>
+          </div> 
+        </div>
+         <div class="step-btns mt-3">
+          <button style="width: 31%; margin-right: 1rem;" class="btn button btn-primary mobile-btn pt-3 pb-3  fw-bold"
+           >Submit</button>
+        </div> 
+      </div>
+
+      <div >
+      </div>
+      </div>
+      </div>
+    -->
+     

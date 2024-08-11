@@ -1,0 +1,300 @@
+.stepper-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.step {
+    display: none;
+}
+
+.step.active {
+    display: block;
+}
+
+.step-title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.step-btns {
+    text-align: center;
+}
+
+.step-btns button {
+    width: 100px;
+}
+
+
+.main-title{
+    color: var(--neutral-grey-02, #1A1A1A);
+
+/* UI/T2/700 */
+font-family: Inter;
+font-size: 56px;
+font-style: normal;
+font-weight: 700;
+line-height: 62px; /* 110.714% */
+}
+.small-title{
+    padding-left: -2rem;
+  }
+
+.description{
+    color: var(--neutral-grey-07, #999);
+text-align: center;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+}
+
+// image uploader styling
+.name-img{
+    // width: 12px;
+    // height: 12px;
+    margin-left: -33px;
+    margin-right: 7px;
+  }
+ 
+  ul li{
+    color: var(--Primary-Colors-04, #CCE8FF);
+list-style: none;
+    /* Button/Text */
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 28px; /* 200% */
+  }
+
+
+
+// CARD
+.overlay {
+    position: absolute;
+
+    top: 85%;
+    left: 0%;
+    // transform: translate(-50%, -50%);
+    text-align: center;
+    padding-left: 12px;
+    color: rgb(197, 192, 192);
+}
+.card{
+    border: none;
+}
+
+.card image {
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+}
+
+.card-title {
+    color: var(--neutral-grey-11, #FFF);
+    display: flex;
+    /* UI/T6/700 */
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 30px;
+    padding-left: 18px;
+    /* 125% */
+}
+
+
+.category-select{
+    color: var(--neutral-grey-01, #000);
+
+/* UI/B2/400 */
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+}
+.border-style{
+   margin-left: 20rem;
+}
+
+.button{
+//     display: flex;
+// width: 440px;
+// padding: 16px 32px;
+// justify-content: center;
+// align-items: center;
+// gap: 8px;
+border-radius: 8px;
+border: 1px solid var(--neutral-grey-09, #CCC);
+background: var(--neutral-grey-11, #FFF);
+margin-left: 12px;
+}
+
+
+.field{
+    display: flex;
+width: 440px;
+padding: 16px;
+align-items: flex-start;
+gap: 13px;
+border-radius: 8px;
+border: 1px solid var(--neutral-grey-02, #1A1A1A);
+background: var(--neutral-grey-11, #FFF);
+}
+
+
+
+.input{
+    display: flex;
+    width: 440px;
+    padding: 16px;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 8px;
+border: 1px solid var(--neutral-grey-09, #CCC);
+background: var(--neutral-grey-11, #FFF);
+  }
+  .input-style{
+    color: var(--neutral-grey-07, #999);
+
+    /* UI/B3/400 */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 157.143% */
+    border: none;
+    outline: none;
+  }
+
+  // LABEL 
+  .label{
+    color: var(--neutral-grey-02, #1A1A1A);
+
+/* UI/B2/400 */
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px; /* 150% */
+  }
+
+.Ellips-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .Ellips-2 {
+    display: flex;
+    position: absolute;
+    top: 18rem;
+    right: 0;
+  }
+  .width-1{
+    width: 60rem;
+  }
+  .width{
+    width: 29rem;
+  }
+
+  .map{
+    width: 460px;
+    height: 270px;
+   
+  }
+
+
+
+//   RESPONSIVE nESS
+/* CSS for larger screens (default styles) */
+
+/* Media query for mobile devices */
+@media only screen and (max-width: 770px) {
+  .width-1{
+    width: 40rem !important;
+  }
+
+  .width{
+    width: 40rem !important;
+    margin-top: 23px;
+
+  }
+
+
+  .main-title{
+    color: var(--neutral-grey-02, #1A1A1A);
+
+/* UI/T2/700 */
+font-family: Inter;
+font-size: 23px;
+font-style: normal;
+font-weight: 600;
+line-height: 32px; /* 110.714% */
+
+
+}
+
+.mobile-btn{
+  width: 10rem;
+}
+}
+
+
+// Mobile
+@media only screen and (max-width: 430px) {
+ .map{
+ width: 90%;
+ 
+}
+
+
+// .map-section{
+//   margin-left: 2rem;
+// }
+
+
+
+.width-1{
+  width: 26rem !important;
+}
+
+
+  .width{
+    width: 26rem !important;
+    margin-top: 23px;
+
+  }
+
+
+  .input{
+    display: flex;
+    width: 260px;
+    padding: 9px;
+    align-items: flex-start;
+    gap: 8px;
+    border-radius: 8px;
+border: 1px solid var(--neutral-grey-09, #CCC);
+background: var(--neutral-grey-11, #FFF);
+  }
+
+
+.mobile-view{
+  width: 90% !important;
+}
+
+ .container-mobile{
+  padding: 20px 0px 0px 20px !important;
+ } 
+
+.mobile-btn{
+  width: 10rem !important;
+}
+
+.description{
+  padding : 0px !important;
+}
+}

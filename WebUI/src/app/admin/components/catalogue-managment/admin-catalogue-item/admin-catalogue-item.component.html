@@ -1,0 +1,54 @@
+<h2 mat-dialog-title>{{data.mode}} Catalogue </h2>
+<mat-dialog-content class="mat-typography">
+    <form [formGroup]="catalogueForm">
+    
+        <div class="form-group">
+            <label> Catalogue Name </label>
+            <input type="text" class="form-control" formControlName="catalogueName">
+            @if(catalogueForm.controls['catalogueName'].touched &&catalogueForm.controls['catalogueName'].hasError('required')){
+                <span class="text-danger"> Cataloge Name is required</span>
+                }
+        </div>
+
+        <div class="form-group">
+            <label> Description</label>
+            <input type="text" class="form-control" formControlName="description">
+            @if(catalogueForm.controls['description'].touched &&catalogueForm.controls['description'].hasError('required')){
+                <span class="text-danger"> Cataloge description is required</span>
+                }
+        </div>  
+    <br>
+    <div class="form-group">
+        <div formArrayName="catalogueDetails">
+            <div *ngFor="let catlogue of cataloguedetails.controls; let i=index">
+                <br>
+              <div [formGroupName]="i">
+                {{i}}
+                Catalogue Detail :
+                <input type="text" class="form-control" formControlName="name" class="inputtag">
+                <button (click)="removeSkill(i)"[disabled]="catalogueForm.invalid">Remove</button>
+              </div>
+      
+            </div>
+         
+          </div>
+</div>
+
+    </form>
+    <p>
+        <button type="button" (click)="addCatalogueDetail()" [disabled]="cataloguedetails.invalid" >Add Catalogue </button>
+         <!-- //*ngIf="data.mode=='Delete'" -->
+      </p>
+      
+      {{cataloguedetails.value|json}}
+
+</mat-dialog-content>
+
+
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close cdkFocusInitial>Cancel</button>
+    <button mat-button (click)="save()" [disabled]="catalogueForm.invalid" *ngIf="data.mode=='New'">Save</button>
+    <button mat-button (click)="update()" [disabled]="catalogueForm.invalid" *ngIf="data.mode=='Edit'">update</button>
+    <button mat-button (click)="deleteItem()" [disabled]="catalogueForm.invalid" *ngIf="data.mode=='Delete'">Delete</button>
+    
+</mat-dialog-actions>
